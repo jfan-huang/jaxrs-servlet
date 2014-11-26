@@ -1,0 +1,30 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+
+	<servlet>
+		<servlet-name>JAXRS Web Application</servlet-name>
+		<servlet-class>org.jfan.web.ws.rs.impl.JAXRSServlet</servlet-class>
+		<init-param>
+			<param-name>jaxrs.server.provider.packages</param-name>
+			<param-value>
+				org.jfan.web.examples1
+				org.jfan.web.examples2
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jaxrs.server.provider.classloading</param-name>
+			<param-value>org.jfan.web.ExamplesWebComponentImpl</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>JAXRS Web Application</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>
